@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale']" position="inside">
+                <label for="property_sale_margin" groups="spc.group_invoice_to_country"/>
+                <div class="o_row" groups="spc.group_invoice_to_country">
+                    <field name="property_sale_margin"/>
+                    <span>%</span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

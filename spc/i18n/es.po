@@ -1,0 +1,228 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* spc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-22 00:22+0000\n"
+"PO-Revision-Date: 2018-12-22 00:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spc
+#: model:ir.model.fields,help:spc.field_stock_move_serial_numbers
+msgid "A string that contains several unique serial numbers separated by commas."
+msgstr "Una cadena que contiene varios números de serie únicos separados por comas."
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_stock_move_operations_inherit
+msgid "Assigns a serial number to each move line."
+msgstr "Asigna un número de serie a cada línea de movimiento."
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_stock_move_serial_numbers
+msgid "Serial Numbers"
+msgstr "Seriales"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_stock_move_operations_inherit
+msgid "Assign & Confirm"
+msgstr "Asignar y Confirmar"
+
+#. module: spc
+#: code:addons/spc/models/stock_move.py:30
+#, python-format
+msgid "There is no correspondence between the number of serials to assign (%d) and the number of lines in the movement (%d)."
+msgstr "No hay correspondencia entre el número de seriales para asignar (%d) y el número de líneas en el movimiento (%d)."
+
+#. module: spc
+#: code:addons/spc/models/stock_move.py:20
+#, python-format
+msgid "To use this feature, you must provide a valid input string. E.g. ABC012,DEF345,XYZ678"
+msgstr "Para usar esta característica, debe proporcionar una cadena de entrada válida. E.j. ABC012,DEF345,XYZ678"
+
+#. module: spc
+#: model:res.groups,comment:spc.group_invoice_to_country
+msgid "\n"
+"            - Users of this group will have access to the menu\n"
+"            'To be invoiced to country' and to the sales margin\n"
+"            field in the partner.\n"
+"        "
+msgstr "\n"
+"            - Los usuarios de este grupo tendrán acceso al menú\n"
+"            'Por facturar a país' y al campo de margen de ventas\n"
+"            en contactos"
+"        "
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_amount
+msgid "Base amount"
+msgstr "Base imponible"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: spc
+#: model:ir.model,name:spc.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: spc
+#: model:ir.model,name:spc.model_account_invoice_create
+#: model:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
+msgid "Create Invoice"
+msgstr "Crear Factura"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_line_line_dest_id
+msgid "Downstream Line"
+msgstr "Línea de factura destino"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: spc
+#: model:ir.model,name:spc.model_account_invoice_line
+#: model:ir.ui.view,arch_db:spc.spc_view_invoice_line_tree
+msgid "Invoice Line"
+msgstr "Linea de la Factura"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_invoice_line_ids
+msgid "Invoice Lines"
+msgstr "Líneas de factura"
+
+#. module: spc
+#: model:res.groups,name:spc.group_invoice_to_country
+msgid "Invoice To Country"
+msgstr "Invoice To Country"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_account_invoice_create_from_invoice_lines
+#: model:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
+msgid "Invoice to Country"
+msgstr "Facturar a país"
+
+#. module: spc
+#: model:ir.model.fields,help:spc.field_account_invoice_line_line_dest_id
+msgid "It's filled, it's because a customer invoice line was generated from this line."
+msgstr "Línea de factura de cliente generada a partir de esta línea."
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_partner_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: spc
+#: model:ir.model.fields,help:spc.field_account_invoice_create_partner_id
+msgid "Partner to be invoiced"
+msgstr "Empresa a facturar"
+
+#. module: spc
+#: code:addons/spc/wizard/account_invoice_create.py:84
+#, python-format
+msgid "Please define an accounting sale journal for this company."
+msgstr "Por favor, defina un diario de ventas de contabilidad para esta empresa."
+
+#. module: spc
+#: code:addons/spc/wizard/account_invoice_create.py:122
+#, python-format
+msgid "Please define income account for this product: \"%s\" (id:%d) - or for its category: \"%s\"."
+msgstr "Por favor, defina la cuenta de ingresos para este producto: \"%s\" (id:%d) - o para su categoría: \"%s\"."
+
+#. module: spc
+#: code:addons/spc/wizard/account_invoice_create.py:65
+#, python-format
+msgid "Programming error: wizard action executed without active_ids in context."
+msgstr "Error de programación: la acción del wizard ha sido ejecutada sin active_ids en contexto."
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create_sale_margin
+#: model:ir.model.fields,field_description:spc.field_res_partner_property_sale_margin
+#: model:ir.model.fields,field_description:spc.field_res_users_property_sale_margin
+msgid "Sale Margin"
+msgstr "Margen de venta"
+
+#. module: spc
+#: model:ir.model.fields,help:spc.field_account_invoice_create_sale_margin
+msgid "Sale margin configured in selected partner"
+msgstr "Margen de venta configurado en la empresa seleccionada"
+
+#. module: spc
+#: model:ir.model.fields,help:spc.field_res_partner_property_sale_margin
+#: model:ir.model.fields,help:spc.field_res_users_property_sale_margin
+msgid "This percentage will be applied to the sale price when an invoice is made to this customer using the 'Invoice to Country' wizard."
+msgstr "Este porcentaje se aplicará al precio de venta cuando se haga una factura a este cliente utilizando el wizard 'Facturar a país'."
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_invoice_line_tree1
+#: model:ir.ui.menu,name:spc.menu_action_invoice_line_tree1
+msgid "To be Invoiced to country"
+msgstr "Por facturar a país"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.spc_view_invoice_line_tree
+msgid "Total"
+msgstr "Total"
+
+#. module: spc
+#: code:addons/spc/wizard/account_invoice_create.py:155
+#, python-format
+msgid "You must first select a partner!"
+msgstr "Primero debe haber seleccionado una empresa!"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_purchase_order_sale_order_id
+msgid "Sale order"
+msgstr "Orden de venta"
+
+#. module: spc
+#: model:ir.model.fields,help:spc.field_purchase_order_sale_order_id
+msgid "This is the sale order to associate this order's cost with."
+msgstr "Esta es la orden de venta para asociar los costos de esta orden de compra."
+

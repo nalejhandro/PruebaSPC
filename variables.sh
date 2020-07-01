@@ -1,0 +1,11 @@
+export BASE_IMAGE="vauxoo/odoo-110-image"
+export PSQL_VERSION="11"
+export VERSION="11.0"
+export ODOO_REPO="vauxoo/odoo"
+export ODOO_BRANCH="11.0"
+export MAIN_APP="spc"
+export TRAVIS_PYTHON_VERSION="3.6"
+export TRAVIS_REPO_SLUG="Vauxoo/"
+export COUNTRY="CR"
+export CUSTOMER="spc"
+export COVERAGE_MIN=80

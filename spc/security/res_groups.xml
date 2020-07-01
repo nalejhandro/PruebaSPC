@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_invoice_to_country" model="res.groups">
+        <field name="name">Invoice To Country</field>
+        <field name="comment">
+            - Users of this group will have access to the menu
+            'To be invoiced to country' and to the sales margin
+            field in the partner.
+        </field>
+    </record>
+</odoo>
