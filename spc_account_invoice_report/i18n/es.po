@@ -1,0 +1,257 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* spc_account_invoice_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-06 17:43+0000\n"
+"PO-Revision-Date: 2016-04-06 17:43+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "200 ESTE Y 25 SUR, DE LOS SEMAFOROS DE CANAL 7, SABANA, SAN JOSE, COSTA RICA"
+msgstr "200 ESTE Y 25 SUR, DE LOS SEMAFOROS DE CANAL 7, SABANA, SAN JOSE, COSTA RICA"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Addres:"
+msgstr "Dirección:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Amount"
+msgstr "Importe"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Amount Taxes"
+msgstr "Importe con impuestos"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "COUNTED"
+msgstr "CONTADO"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "CREDIT"
+msgstr "CREDITO"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Code"
+msgstr "Código"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Customer:"
+msgstr "Cliente:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "DAY"
+msgstr "DIA"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "DISCOUNT"
+msgstr "DESCUENTO"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "DUCUMENT"
+msgstr "CÉDULA"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Description"
+msgstr "Descripción"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Description:"
+msgstr "Descripción:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Disc."
+msgstr "Desc."
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Discount ("
+msgstr "Descuento ("
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Exempt Amount"
+msgstr "Importe excento"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Fax:"
+msgstr "Fax:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Fiscal Position Remark:"
+msgstr "Observaciones de la posición fiscal"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "INVOICE"
+msgstr "FACTURA"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "INVOICE TOTAL"
+msgstr "TOTAL FACTURA"
+
+#. module: spc_account_invoice_report
+#: model:ir.model,name:spc_account_invoice_report.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "MONTH"
+msgstr "MES"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "No Cédula"
+msgstr "No Cédula"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Page:"
+msgstr "Pág:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Payment Term:"
+msgstr "Plazo de pago:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Price unit"
+msgstr "Precio unitario"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Quant."
+msgstr "Cant."
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Recibido conforme:"
+msgstr "Recibido conforme:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Reference:"
+msgstr "Referencia:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Registry:"
+msgstr "Cédula jurídica:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "SIGNATURE RECEIVED"
+msgstr "RECIBIDO CONFORME"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "SUB-TOTAL"
+msgstr "SUB-TOTAL"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Source:"
+msgstr "Origen:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Supplier:"
+msgstr "Proveedor:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "TAXES"
+msgstr "IMPUESTOS"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Tax"
+msgstr "IV"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Terms & Conditions:"
+msgstr "Términos & Condiciones:"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Total"
+msgstr "Total"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Total line"
+msgstr "Total linea"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "Unit Price"
+msgstr "Precio unidad"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "XMT"
+msgstr "Exe"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "YEAR"
+msgstr "AÑO"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "____________________"
+msgstr "____________________"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "_____________________"
+msgstr "_____________________"
+
+#. module: spc_account_invoice_report
+#: view:website:account.report_invoice_document
+msgid "______________________________"
+msgstr "______________________________"
+

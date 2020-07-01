@@ -1,0 +1,294 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* spc_crm_lead_manufacturer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-29 22:37+0000\n"
+"PO-Revision-Date: 2016-01-29 22:37+0000\n"
+"Last-Translator: Glen Sojo <glen.sojo@clearcorp.co.cr>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spc_crm_lead_manufacturer
+#: view:spc.crm.lead.manufacturer.wizard:spc_crm_lead_manufacturer.view_lead_manufacturer_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.line,code:0
+msgid "Code"
+msgstr "Código"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Comercial:"
+msgstr "Comercial:"
+
+#. module: spc_crm_lead_manufacturer
+#: selection:crm.lead,projection:0
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Commited"
+msgstr "Comprometido"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.wizard,company_ids:0
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Company"
+msgstr "Compañía"
+
+#. module: spc_crm_lead_manufacturer
+#: view:crm.lead:spc_crm_lead_manufacturer.spc_crm_lead_manufacturer
+msgid "Costo"
+msgstr "Costo"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.line,create_uid:0
+#: field:spc.crm.lead.manufacturer.wizard,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.line,create_date:0
+#: field:spc.crm.lead.manufacturer.wizard,create_date:0
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: spc_crm_lead_manufacturer
+#: selection:crm.lead,principal_address:0
+msgid "CyberSecurity"
+msgstr "CyberSecurity"
+
+#. module: spc_crm_lead_manufacturer
+#: selection:crm.lead,principal_address:0
+msgid "DataCenter"
+msgstr "DataCenter"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Deadline"
+msgstr "Cierre previsto"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.wizard,date_to:0
+msgid "End Date"
+msgstr "Fecha final"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.line,estimate:0
+msgid "Estimate"
+msgstr "Estimado"
+
+#. module: spc_crm_lead_manufacturer
+#: view:crm.lead:spc_crm_lead_manufacturer.spc_crm_lead_manufacturer
+msgid "Estimate Total"
+msgstr "Total Estimado"
+
+#. module: spc_crm_lead_manufacturer
+#: code:addons/spc_crm_lead_manufacturer/spc_crm_lead_manufacturer.py:53
+#, python-format
+msgid "Estimate total must be equal to 100%"
+msgstr "Total estimado debe ser igual a 100%"
+
+#. module: spc_crm_lead_manufacturer
+#: selection:crm.lead,projection:0
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Expected"
+msgstr "Esperado"
+
+#. module: spc_crm_lead_manufacturer
+#: field:report.spc_crm_lead_manufacturer.report_lead_manufacturer,id:0
+#: field:spc.crm.lead.manufacturer.line,id:0
+#: field:spc.crm.lead.manufacturer.wizard,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: spc_crm_lead_manufacturer
+#: selection:crm.lead,principal_address:0
+msgid "IT Services"
+msgstr "IT Services"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.line,write_uid:0
+#: field:spc.crm.lead.manufacturer.wizard,write_uid:0
+msgid "Last Updated by"
+msgstr "Últma actualización por"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.line,write_date:0
+#: field:spc.crm.lead.manufacturer.wizard,write_date:0
+msgid "Last Updated on"
+msgstr "última actualización el"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.line,lead_id:0
+msgid "Lead"
+msgstr "Iniciativa"
+
+#. module: spc_crm_lead_manufacturer
+#: model:ir.actions.report.xml,name:spc_crm_lead_manufacturer.action_lead_manufacturer_report
+msgid "Lead Forecast"
+msgstr "Proyección de iniciativa"
+
+#. module: spc_crm_lead_manufacturer
+#: model:ir.model,name:spc_crm_lead_manufacturer.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Inicaitiva / Oportunbidad"
+
+#. module: spc_crm_lead_manufacturer
+#: model:ir.ui.menu,name:spc_crm_lead_manufacturer.menu_lead_manufacturer_wizard
+msgid "Leads Forecast"
+msgstr "Proyección de iniciativas"
+
+#. module: spc_crm_lead_manufacturer
+#: field:crm.lead,manufacturer_line_ids:0
+#: field:product.brand,manufacturer_line_ids:0
+#: field:spc.crm.lead.manufacturer.line,product_brand_id:0
+msgid "Manufacturer"
+msgstr "Fabricante"
+
+#. module: spc_crm_lead_manufacturer
+#: view:crm.lead:spc_crm_lead_manufacturer.spc_crm_lead_manufacturer
+msgid "Margen"
+msgstr "Margen"
+
+#. module: spc_crm_lead_manufacturer
+#: selection:crm.lead,principal_address:0
+msgid "Networking"
+msgstr "Networking"
+
+#. module: spc_crm_lead_manufacturer
+#: selection:crm.lead,projection:0
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "None"
+msgstr "Ninguno"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Opportunity"
+msgstr "Oportunidad"
+
+#. module: spc_crm_lead_manufacturer
+#: field:crm.lead,principal_address:0
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Principal Address"
+msgstr "Dirección Principal"
+
+#. module: spc_crm_lead_manufacturer
+#: view:spc.crm.lead.manufacturer.wizard:spc_crm_lead_manufacturer.view_lead_manufacturer_wizard_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: spc_crm_lead_manufacturer
+#: view:crm.lead:spc_crm_lead_manufacturer.spc_crm_lead_manufacturer
+msgid "Productos"
+msgstr "Productos"
+
+#. module: spc_crm_lead_manufacturer
+#: field:crm.lead,projection:0
+msgid "Projection"
+msgstr "Proyección"
+
+#. module: spc_crm_lead_manufacturer
+#: code:addons/spc_crm_lead_manufacturer/spc_crm_lead_manufacturer.py:64
+#, python-format
+msgid "Projection can't be Sold when the opportunity isn't Won"
+msgstr "La proyeción no puede ser vendido si la oportunidad no está ganado"
+
+#. module: spc_crm_lead_manufacturer
+#: view:spc.crm.lead.manufacturer.wizard:spc_crm_lead_manufacturer.view_lead_manufacturer_wizard_form
+msgid "Report Options"
+msgstr "Opciones de reporte"
+
+#. module: spc_crm_lead_manufacturer
+#: model:ir.actions.act_window,name:spc_crm_lead_manufacturer.action_lead_manufacturer_wizard
+msgid "Report Wizard"
+msgstr "Asistente de reporte"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Reporte del comercial"
+msgstr "Reporte del comercial"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "SUM(G"
+msgstr "SUM(G"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "SUM(H"
+msgstr "SUM(H"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "SUM(I"
+msgstr "SUM(I"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "SUM(J"
+msgstr "SUM(J"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "SUM(K"
+msgstr "SUM(K"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Salesman"
+msgstr "Comercial"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.wizard,user_ids:0
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: spc_crm_lead_manufacturer
+#: view:crm.lead:spc_crm_lead_manufacturer.spc_crm_lead_manufacturer
+msgid "Servicios Adm."
+msgstr "Servicios Adm."
+
+#. module: spc_crm_lead_manufacturer
+#: view:crm.lead:spc_crm_lead_manufacturer.spc_crm_lead_manufacturer
+msgid "Servicios Ing."
+msgstr "Servicios Ing."
+
+#. module: spc_crm_lead_manufacturer
+#: selection:crm.lead,projection:0
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Sold"
+msgstr "Vendido"
+
+#. module: spc_crm_lead_manufacturer
+#: field:spc.crm.lead.manufacturer.wizard,date_from:0
+msgid "Start Date"
+msgstr "Fecha inicial"
+
+#. module: spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "State/Status"
+msgstr "Estado/Etapa"
+
+#. module: spc_crm_lead_manufacturer
+#: view:crm.lead:spc_crm_lead_manufacturer.spc_crm_lead_manufacturer
+msgid "TOTAL"
+msgstr "TOTAL"
+
+#. module: spc_crm_lead_manufacturer
+#: view:crm.lead:spc_crm_lead_manufacturer.spc_crm_lead_manufacturer
+#: view:website:spc_crm_lead_manufacturer.report_lead_manufacturer
+msgid "Total"
+msgstr "Total"
+
+#. module: spc_crm_lead_manufacturer
+#: view:spc.crm.lead.manufacturer.wizard:spc_crm_lead_manufacturer.view_lead_manufacturer_wizard_form
+msgid "or"
+msgstr "ó"
+

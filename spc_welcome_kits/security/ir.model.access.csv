@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_contract_line_user,access.contract.line.user,model_sale_order_contract_line,base.group_user,1,0,0,0
+access_contract_line_salesman,access.contract.line.user,model_sale_order_contract_line,base.group_sale_salesman,1,0,0,0

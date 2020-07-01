@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* spc_manual_move
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-27 21:10+0000\n"
+"PO-Revision-Date: 2015-05-27 21:10+0000\n"
+"Last-Translator: Glen Sojo <glen.sojo@clearcorp.co.cr>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spc_manual_move
+#: model:ir.model,name:spc_manual_move.model_account_move
+msgid "Account Entry"
+msgstr "Asiento contable"
+
+#. module: spc_manual_move
+#: view:account.move:spc_manual_move.view_move_search
+#: help:account.move,manual_move:0
+msgid "Entries created manually"
+msgstr "Asientos creados manualmente"
+
+#. module: spc_manual_move
+#: field:account.move,manual_move:0
+msgid "Manual"
+msgstr "Manual"
+
+#. module: spc_manual_move
+#: view:account.move:spc_manual_move.view_move_search
+msgid "Manual Entries"
+msgstr "Asientos manuales"
+
+#. module: spc_manual_move
+#: view:account.move.line:spc_manual_move.view_move_line_form
+#: view:account.move.line:spc_manual_move.view_move_line_tree
+msgid "{'default_manual_move': True}"
+msgstr "{'default_manual_move': True}"

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 ClearCorp
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<odoo>
+        <record id="view_sale_order_form" model="ir.ui.view">
+            <field name="name">Sale Order Form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header/button[@name='action_cancel']" position="after">
+                    <button name="action_reassign_sale_costs" string="Reassign Sale Costs" type="object" groups="spc_sale_costs.group_reassign_costs"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook" position="inside">
+                    <page name="costs" string="Costs">
+                        <group>
+                            <group col="3">
+                                <field name="cost_error"/>
+                                <button name="action_toggle_cost_manual_fix" type="object" string="Manual" groups="spc_sale_costs.group_manual_fix" />
+                                <field name="period_error"/>
+                                <button name="action_toggle_period_manual_fix" type="object" string="Manual" groups="spc_sale_costs.group_manual_fix" />
+                            </group>
+                            <group col="3">
+                                <field name="profit_percentage"/>
+                            </group>
+                        </group>
+                        <separator string="Cost Pickings"/>
+                        <field name="cost_picking_ids" nolabel="1"/>
+                        <separator string="Income Lines"/>
+                        <field name="income_line_ids" nolabel="1"/>
+                        <separator string="Cost Lines"/>
+                        <field name="cost_line_ids" nolabel="1"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_sale_order_tree" model="ir.ui.view">
+            <field name="name">Sale Order Tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='state']" position="after">
+                    <field name="cost_error"/>
+                    <field name="period_error"/>
+                    <field name="profit_percentage"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_sale_order_search" model="ir.ui.view">
+            <field name="name">Sale Order Search</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search/field[@name='user_id']" position="after">
+                    <field name="profit_percentage"/>
+                </xpath>
+                <xpath expr="//search/group" position="before">
+                    <separator/>
+                    <filter string="Cost Error" name="cost_error" domain="[('cost_error','=','error')]"/>
+                    <filter string="Period Error" name="period_error" domain="[('period_error','=','error')]"/>
+                </xpath>
+            </field>
+        </record>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="purchase.purchase_form_action" model="ir.actions.act_window">
+            <field name="context">{'default_picking_type_id': False}</field>
+        </record>
+        <record id="purchase.purchase_rfq" model="ir.actions.act_window">
+            <field name="context">{'default_picking_type_id': False}</field>
+        </record>
+</odoo>

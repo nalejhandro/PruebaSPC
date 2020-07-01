@@ -1,0 +1,26 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* spc_project_issue_search_attachments
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-29 17:42+0000\n"
+"PO-Revision-Date: 2016-08-29 17:42+0000\n"
+"Last-Translator: Antonio Hidalgo <antonio.hidalgo@clearcorp.co.cr>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spc_project_issue_search_attachments
+#: model:ir.model,name:spc_project_issue_search_attachments.model_project_issue
+msgid "Project Issue"
+msgstr "Incidencia proyecto"
+
+#. module: spc_project_issue_search_attachments
+#: view:project.issue:spc_project_issue_search_attachments.view_issue_filter
+msgid "Related Attachments"
+msgstr "Archivos adjuntos asociados"
