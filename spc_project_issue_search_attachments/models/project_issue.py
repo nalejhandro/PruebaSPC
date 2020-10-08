@@ -20,7 +20,6 @@ class ProjectIssue(models.Model):
         issue_ids = [attachment.res_id for attachment in attachments]
         return [('id', 'in', issue_ids)]
 
-    @api.multi
     def _compute_related_attachments(self):
         for issue in self:
             issue.attachment_ids = self.env["ir.attachment"].search(

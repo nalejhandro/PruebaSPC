@@ -72,7 +72,6 @@ class AccountInvoiceCreate(models.TransientModel):
 
         return res
 
-    @api.multi
     def _prepare_invoice(self):
         """ Prepare the dict of values to create the new invoice from a selected invoice lines.
         """
@@ -101,7 +100,6 @@ class AccountInvoiceCreate(models.TransientModel):
 
         return values
 
-    @api.multi
     def _prepare_invoice_line(self, line, invoice):
         """ Prepare the dict of values to create the new invoice line
         :param line: source account invoice line
@@ -143,7 +141,6 @@ class AccountInvoiceCreate(models.TransientModel):
         }
         return res
 
-    @api.multi
     def action_invoice_create(self):
         precision = self.env['decimal.precision'].precision_get(
             'Product Unit of Measure')

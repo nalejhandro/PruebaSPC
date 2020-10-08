@@ -11,7 +11,6 @@ class CrmLead(models.Model):
         readonly=True
     )
 
-    @api.multi
     def write(self, vals):
         if 'stage_id' in vals:
             vals['date_stage_change'] = datetime.now()
