@@ -1,6 +1,6 @@
-[![Build Status](https://git.vauxoo.com/vauxoo/spc/badges/11.0/build.svg)](https://git.vauxoo.com/vauxoo/spc/pipelines)
-[![Coverage Report](https://git.vauxoo.com/vauxoo/spc/badges/11.0/coverage.svg)](https://coverage.vauxoo.com/11-0-spc)
-[![Runbot Status](http://runbot.vauxoo.com/runbot/badge/109/11.0.svg)](http://runbot.vauxoo.com/runbot/repo/git-git-vauxoo-com-vauxoo-spc-git-109)
+[![Build Status](https://git.vauxoo.com/vauxoo/spc/badges/13.0/build.svg)](https://git.vauxoo.com/vauxoo/spc/pipelines)
+[![Coverage Report](https://git.vauxoo.com/vauxoo/spc/badges/13.0/coverage.svg)](https://coverage.vauxoo.com/13-0-spc)
+[![Runbot Status](http://runbot.vauxoo.com/runbot/badge/109/13.0.svg)](http://runbot.vauxoo.com/runbot/repo/git-git-vauxoo-com-vauxoo-spc-git-109)
 
 
 
@@ -77,15 +77,15 @@ Deploy locally to hack it
    command line:
 
     ```bash
-    $ t2d git@git.vauxoo.com:vauxoo/spc.git 11.0
+    $ t2d git@git.vauxoo.com:vauxoo/spc.git 13.0
     ```
 
     The result after run this t2d script will be a log that have a list of
     local paths, in spc case, will have a list of 2 paths
 
     ```bash
-    ['${HOME}/t2d/script/git_git.vauxoo.com_vauxoo_spc.git/11.0/3.6/env_1_job_1',
-     '${HOME}/t2d/script/git_git.vauxoo.com_vauxoo_spc.git/11.0/3.6/env_2_job_1']
+    ['${HOME}/t2d/script/git_git.vauxoo.com_vauxoo_spc.git/13.0/3.6/env_1_job_1',
+     '${HOME}/t2d/script/git_git.vauxoo.com_vauxoo_spc.git/13.0/3.6/env_2_job_1']
     ```
 
     The first one /1 will reproduce the lint tests that are running by the CI,
@@ -102,8 +102,8 @@ Deploy locally to hack it
    add the next extra arguments.
 
     ```bash
-    ${HOME}/t2d/script/git_git.vauxoo.com_vauxoo_spc.git/11.0/3.6/env_2_job_1/10-build.sh --no-cache
-    ${HOME}/t2d/script/git_git.vauxoo.com_vauxoo_spc.git/11.0/3.6/env_2_job_1/20-run.sh --entrypoint=bash
+    ${HOME}/t2d/script/git_git.vauxoo.com_vauxoo_spc.git/13.0/3.6/env_2_job_1/10-build.sh --no-cache
+    ${HOME}/t2d/script/git_git.vauxoo.com_vauxoo_spc.git/13.0/3.6/env_2_job_1/20-run.sh --entrypoint=bash
     ```
 
 5. After the last script is finish you will notice that your prompt has change,
@@ -112,7 +112,7 @@ Deploy locally to hack it
 
     ```bash
     [odoo@a458896bf8f5]~/build/vauxoo/spc$
-    (11.0) $
+    (13.0) $
     ```
 
     where a458896bf8f5 is your container id. Now you have access to the
@@ -143,7 +143,7 @@ Deploy locally to hack it
    using the next command:
 
     ```bash
-    $HOME/odoo-11.0/odoo-bin -d openerp_test --db-filter=openerp_test
+    $HOME/odoo-13.0/odoo-bin -d openerp_test --db-filter=openerp_test
     ```
 
 8. Last but not least, you will need to have more than one console view to your

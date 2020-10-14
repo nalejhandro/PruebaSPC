@@ -47,10 +47,13 @@ test:
     - travis_run_tests
     - travis_after_tests_success || true
     - coverage html --rcfile=${CI_PROJECT_DIR}/.coveragerc -d $CI_COMMIT_REF_SLUG || true
+    - coverage xml --rcfile=${CI_PROJECT_DIR}/.coveragerc -o $CI_COMMIT_REF_SLUG/coverage.xml || true
     - coverage report -m --show-missing --rcfile=${CI_PROJECT_DIR}/.coveragerc --fail-under=${COVERAGE_MIN} || [[ $? != 2 ]]
   artifacts:
     paths:
       - $CI_COMMIT_REF_SLUG
+    reports:
+      cobertura: $CI_COMMIT_REF_SLUG/coverage.xml
 
 publish_coverage:
   image: quay.io/vauxoo/dockerv
