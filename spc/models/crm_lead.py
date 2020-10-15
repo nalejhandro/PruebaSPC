@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
 from datetime import datetime
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
     date_stage_change = fields.Datetime(
-        'Fecha de último cambio de etapa',
+        'Date of last stage update',
         readonly=True
     )
 

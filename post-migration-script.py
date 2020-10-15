@@ -123,7 +123,7 @@ class App(object):
         self.clean_menus()
         self.clean_crons()
         self.del_deprecated_models()
-        self.set_main_module_to_install()
+        self.apply_queries_needed_spc()
 
     def clean_menus(self):
         self.cr.execute("""
@@ -363,7 +363,7 @@ class App(object):
             update res_users set password = 'Cl4v3d3M0'
             where id = 2""")
 
-    def set_main_module_to_install(self):
+    def apply_queries_needed_spc(self):
         self.cr.execute("""
             UPDATE ir_module_module SET state = 'to install' WHERE name = 'spc';
             """)
@@ -434,6 +434,20 @@ class App(object):
         self.cr.execute("""
             UPDATE calendar_event_type SET name = 'Llamada telefónica 2' WHERE id = '15';
         """)
+        # The product "Minor Line" is now by data
+        self.cr.execute("""
+            UPDATE
+                ir_model_data
+            SET
+                module = 'spc',
+                name = 'product_minor_line',
+                noupdate = TRUE,
+                date_update = NOW() at time zone 'UTC'
+            WHERE
+                module = '__export__'
+                AND name = 'product_product_44494_771f907d';
+        """)
+
 
 
     def remove_constraint(self):

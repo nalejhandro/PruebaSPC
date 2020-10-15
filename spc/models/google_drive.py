@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import json
 import requests
 
@@ -12,7 +11,7 @@ class GoogleDrive(models.Model):
 
     @api.model
     def copy_doc(self, res_id, template_id, name_gdocs, res_model):
-        # Remove the standard permission which the google_drive app creates.
+        """Remove the standard permission which the google_drive app creates"""
         res = super(GoogleDrive, self).copy_doc(res_id, template_id, name_gdocs, res_model)
         if not res:
             return res

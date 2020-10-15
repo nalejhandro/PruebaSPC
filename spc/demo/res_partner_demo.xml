@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Set sale margin to the secondary company's associated partner -->
+    <record id="stock.res_partner_company_1" model="res.partner" context="{'force_company': ref('base.main_company')}">
+        <field name="property_sale_margin" eval="10.0"/>
+    </record>
+
+</odoo>

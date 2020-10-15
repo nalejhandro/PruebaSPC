@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
 from datetime import datetime
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class HelpdeskTicket(models.Model):
     _inherit = 'helpdesk.ticket'
 
     date_stage_change = fields.Datetime(
-        'Fecha de último cambio de etapa',
+        'Date of last stage update',
         readonly=True
     )
 

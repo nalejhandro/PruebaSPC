@@ -1,34 +1,44 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'SPC Internacional App',
-    'version': '11.0.0.0.3',
+    'version': '13.0.1.0.3',
     "author": "Vauxoo",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     'category': 'Installer',
     'summary': 'SPC Internacional App for customizations',
     'depends': [
-        # Accounting
         'account_accountant',
-
-        # Stock
-        'stock',
-
-        # Purchase
-        'purchase',
-
-        # Sale
-        'sale_management',
-
+        'account_budget',
+        'attachment_indexation',
+        'auth_oauth',
+        'board',
+        'crm',
+        'google_spreadsheet',
+        'helpdesk_timesheet',
+        'hr_payroll',
+        'im_livechat',
+        'inter_company_rules',
+        'l10n_cr',
+        'ocn_client',
+        'purchase_requisition',
+        'sale_product_configurator',
+        'sale_subscription',
+        'stock_dropshipping',
+        'stock_landed_costs',
+        'survey',
+        'website_forum',
+        'website_helpdesk',
     ],
     'data': [
+        'data/product_data.xml',
+        'security/spc_security.xml',
         'views/stock_move_views.xml',
-        'security/res_groups.xml',
-        'views/account_invoice_views.xml',
+        'views/account_move_views.xml',
         'views/res_partner_views.xml',
         'views/purchase_order_views.xml',
-        'wizard/account_invoice_create_view.xml',
+        'wizards/account_invoice_create_views.xml',
     ],
     'demo': [
+        'demo/res_partner_demo.xml',
     ],
     'installable': True,
     'auto_install': False,

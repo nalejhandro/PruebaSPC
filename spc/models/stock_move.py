@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
 import re
-from odoo import exceptions, fields, models, _
+from odoo import fields, models, _
+from odoo.exceptions import ValidationError
 
 
 class StockMove(models.Model):
@@ -15,7 +15,7 @@ class StockMove(models.Model):
         """Assigns a serial number to each move line based on the input string
         provided by the user."""
         if not self.serial_numbers or ',' not in self.serial_numbers:
-            raise exceptions.ValidationError(
+            raise ValidationError(
                 _("To use this feature, you must provide a valid input string."
                   " E.g. ABC012,DEF345,XYZ678")
             )
@@ -36,7 +36,7 @@ class StockMove(models.Model):
             self.move_line_ids.write({'product_uom_qty': 1})
 
         if len(numbers) != len(self.move_line_ids):
-            raise exceptions.ValidationError(
+            raise ValidationError(
                 _("There is no correspondence between the number of serials to"
                   " assign (%d) and the number of lines in the movement (%d).")
                 % (len(numbers), len(self.move_line_ids))

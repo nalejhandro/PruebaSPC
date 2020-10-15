@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-
 from datetime import datetime
 
 from odoo.exceptions import ValidationError
-from odoo.tests.common import TransactionCase
+from odoo.tests import TransactionCase
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 
@@ -11,7 +9,7 @@ class TestStockMove(TransactionCase):
     """Test cases for stock.move model"""
 
     def setUp(self):
-        super(TestStockMove, self).setUp()
+        super().setUp()
         self.partner = self.env.ref('base.res_partner_1')
         self.product = self.env.ref('product.product_delivery_01')
         self.input = 'ABC012,DEF345,GHI678'

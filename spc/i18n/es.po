@@ -1,14 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* spc
+# 	* spc
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0+e\n"
+"Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-22 00:22+0000\n"
-"PO-Revision-Date: 2018-12-22 00:22+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2020-10-15 01:59+0000\n"
+"PO-Revision-Date: 2020-10-15 01:59+0000\n"
+"Last-Translator: Luis González <lgonzalez@vauxoo.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,188 +16,265 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: spc
-#: model:ir.model.fields,help:spc.field_stock_move_serial_numbers
-msgid "A string that contains several unique serial numbers separated by commas."
-msgstr "Una cadena que contiene varios números de serie únicos separados por comas."
-
-#. module: spc
-#: model:ir.ui.view,arch_db:spc.view_stock_move_operations_inherit
-msgid "Assigns a serial number to each move line."
-msgstr "Asigna un número de serie a cada línea de movimiento."
-
-#. module: spc
-#: model:ir.model.fields,field_description:spc.field_stock_move_serial_numbers
-msgid "Serial Numbers"
-msgstr "Seriales"
-
-#. module: spc
-#: model:ir.ui.view,arch_db:spc.view_stock_move_operations_inherit
-msgid "Assign & Confirm"
-msgstr "Asignar y Confirmar"
-
-#. module: spc
-#: code:addons/spc/models/stock_move.py:30
-#, python-format
-msgid "There is no correspondence between the number of serials to assign (%d) and the number of lines in the movement (%d)."
-msgstr "No hay correspondencia entre el número de seriales para asignar (%d) y el número de líneas en el movimiento (%d)."
-
-#. module: spc
-#: code:addons/spc/models/stock_move.py:20
-#, python-format
-msgid "To use this feature, you must provide a valid input string. E.g. ABC012,DEF345,XYZ678"
-msgstr "Para usar esta característica, debe proporcionar una cadena de entrada válida. E.j. ABC012,DEF345,XYZ678"
-
-#. module: spc
 #: model:res.groups,comment:spc.group_invoice_to_country
-msgid "\n"
+msgid ""
+"\n"
 "            - Users of this group will have access to the menu\n"
 "            'To be invoiced to country' and to the sales margin\n"
 "            field in the partner.\n"
 "        "
-msgstr "\n"
+msgstr ""
+"\n"
 "            - Los usuarios de este grupo tendrán acceso al menú\n"
 "            'Por facturar a país' y al campo de margen de ventas\n"
-"            en contactos"
-"        "
+"            en contactos        "
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_amount
+#: model:ir.model.fields,help:spc.field_stock_move__serial_numbers
+msgid ""
+"A string that contains several unique serial numbers separated by commas."
+msgstr ""
+"Una cadena que contiene varios números de serie únicos separados por comas."
+
+#. module: spc
+#: model_terms:ir.ui.view,arch_db:spc.view_stock_move_operations_inherit
+msgid "Assign & Confirm"
+msgstr "Asignar y Confirmar"
+
+#. module: spc
+#: model_terms:ir.ui.view,arch_db:spc.view_stock_move_operations_inherit
+msgid "Assigns a serial number to each move line."
+msgstr "Asigna un número de serie a cada línea de movimiento."
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__amount
 msgid "Base amount"
 msgstr "Base imponible"
 
 #. module: spc
-#: model:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
+#: model_terms:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. module: spc
 #: model:ir.model,name:spc.model_res_partner
 msgid "Contact"
-msgstr "Contact"
+msgstr "Contacto"
 
 #. module: spc
 #: model:ir.model,name:spc.model_account_invoice_create
-#: model:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
+#: model_terms:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
 msgid "Create Invoice"
 msgstr "Crear Factura"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_create_uid
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_create_date
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__create_date
 msgid "Created on"
 msgstr "Creado en"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_currency_id
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__currency_id
 msgid "Currency"
 msgstr "Moneda"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_display_name
+#: model:ir.model.fields,field_description:spc.field_crm_lead__date_stage_change
+#: model:ir.model.fields,field_description:spc.field_helpdesk_ticket__date_stage_change
+#: model:ir.model.fields,field_description:spc.field_project_task__date_stage_change
+msgid "Date of last stage update"
+msgstr "Fecha de último cambio de etapa"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_line_line_dest_id
+#: model:ir.model.fields,field_description:spc.field_account_move_line__invoice_dest_id
+msgid "Downstream Invoice"
+msgstr "Invoice descendente"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_move_line__line_dest_id
 msgid "Downstream Line"
-msgstr "Línea de factura destino"
+msgstr "Línea descendente"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_id
+#: model:ir.model,name:spc.model_google_drive_config
+msgid "Google Drive templates config"
+msgstr "Configuración de plantillas de Google Drive"
+
+#. module: spc
+#: model:ir.model,name:spc.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Ticket de Mesa de Ayuda"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__id
 msgid "ID"
-msgstr "ID (identificación)"
+msgstr ""
 
 #. module: spc
-#: model:ir.model,name:spc.model_account_invoice_line
-#: model:ir.ui.view,arch_db:spc.spc_view_invoice_line_tree
-msgid "Invoice Line"
-msgstr "Linea de la Factura"
+#: model:ir.model.fields,help:spc.field_account_move_line__invoice_dest_id
+#: model:ir.model.fields,help:spc.field_account_move_line__line_dest_id
+msgid ""
+"If it's filled, it's because a customer invoice line was generated from this"
+" line."
+msgstr ""
+"Si está establecido, significa que una línea de factura de cliente se generó"
+" a partir de esta línea."
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_invoice_line_ids
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__invoice_line_ids
 msgid "Invoice Lines"
 msgstr "Líneas de factura"
 
 #. module: spc
 #: model:res.groups,name:spc.group_invoice_to_country
 msgid "Invoice To Country"
-msgstr "Invoice To Country"
+msgstr "Facturar a país"
 
 #. module: spc
 #: model:ir.actions.act_window,name:spc.action_account_invoice_create_from_invoice_lines
-#: model:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
+#: model_terms:ir.ui.view,arch_db:spc.view_account_invoice_create_from_invoice_lines
 msgid "Invoice to Country"
 msgstr "Facturar a país"
 
 #. module: spc
-#: model:ir.model.fields,help:spc.field_account_invoice_line_line_dest_id
-msgid "It's filled, it's because a customer invoice line was generated from this line."
-msgstr "Línea de factura de cliente generada a partir de esta línea."
+#: model:ir.model,name:spc.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create___last_update
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_write_uid
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__write_uid
 msgid "Last Updated by"
-msgstr "Última actualización de"
+msgstr "Última actualización por"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_write_date
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_partner_id
+#: model:ir.model,name:spc.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: spc
+#: model:product.product,name:spc.product_minor_line
+#: model:product.template,name:spc.product_minor_line_product_template
+msgid "Minor line"
+msgstr "Línea Menor"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__partner_id
 msgid "Partner"
-msgstr "Empresa"
+msgstr "Cliente"
 
 #. module: spc
-#: model:ir.model.fields,help:spc.field_account_invoice_create_partner_id
+#: model:ir.model.fields,help:spc.field_account_invoice_create__partner_id
 msgid "Partner to be invoiced"
-msgstr "Empresa a facturar"
+msgstr "Cliente a ser facturado"
 
 #. module: spc
-#: code:addons/spc/wizard/account_invoice_create.py:84
+#: code:addons/spc/wizards/account_invoice_create.py:0
 #, python-format
 msgid "Please define an accounting sale journal for this company."
-msgstr "Por favor, defina un diario de ventas de contabilidad para esta empresa."
+msgstr ""
+"Por favor, defina un diario de ventas de contabilidad para esta empresa."
 
 #. module: spc
-#: code:addons/spc/wizard/account_invoice_create.py:122
+#: code:addons/spc/wizards/account_invoice_create.py:0
 #, python-format
-msgid "Please define income account for this product: \"%s\" (id:%d) - or for its category: \"%s\"."
-msgstr "Por favor, defina la cuenta de ingresos para este producto: \"%s\" (id:%d) - o para su categoría: \"%s\"."
+msgid ""
+"Please define income account for this product: \"%s\" (id:%d) - or for its "
+"category: \"%s\"."
+msgstr ""
+"Por favor, defina la cuenta de ingresos para este producto: \"%s\" (id:%d) -"
+" o para su categoría: \"%s\"."
 
 #. module: spc
-#: code:addons/spc/wizard/account_invoice_create.py:65
-#, python-format
-msgid "Programming error: wizard action executed without active_ids in context."
-msgstr "Error de programación: la acción del wizard ha sido ejecutada sin active_ids en contexto."
+#: model:ir.model,name:spc.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_account_invoice_create_sale_margin
-#: model:ir.model.fields,field_description:spc.field_res_partner_property_sale_margin
-#: model:ir.model.fields,field_description:spc.field_res_users_property_sale_margin
+#: model:ir.model.fields,field_description:spc.field_account_invoice_create__sale_margin
+#: model:ir.model.fields,field_description:spc.field_res_partner__property_sale_margin
+#: model:ir.model.fields,field_description:spc.field_res_users__property_sale_margin
 msgid "Sale Margin"
 msgstr "Margen de venta"
 
 #. module: spc
-#: model:ir.model.fields,help:spc.field_account_invoice_create_sale_margin
+#: model:ir.model.fields,help:spc.field_account_invoice_create__sale_margin
 msgid "Sale margin configured in selected partner"
 msgstr "Margen de venta configurado en la empresa seleccionada"
 
 #. module: spc
-#: model:ir.model.fields,help:spc.field_res_partner_property_sale_margin
-#: model:ir.model.fields,help:spc.field_res_users_property_sale_margin
-msgid "This percentage will be applied to the sale price when an invoice is made to this customer using the 'Invoice to Country' wizard."
-msgstr "Este porcentaje se aplicará al precio de venta cuando se haga una factura a este cliente utilizando el wizard 'Facturar a país'."
+#: model:ir.model.fields,field_description:spc.field_purchase_order__sale_order_id
+msgid "Sale order"
+msgstr "Pedido de venta"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_stock_move__serial_numbers
+msgid "Serial Numbers"
+msgstr "Números de serie"
+
+#. module: spc
+#: model:ir.model,name:spc.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento stock"
+
+#. module: spc
+#: model:ir.model,name:spc.model_project_task
+msgid "Task"
+msgstr "Tarea"
+
+#. module: spc
+#: code:addons/spc/models/google_drive.py:0
+#, python-format
+msgid ""
+"The permission 'reader' for 'anyone with the link' has not been removed on "
+"the document"
+msgstr ""
+"El permiso 'lectura' para 'cualquiera con el enlace' no se ha eliminado del "
+"documento."
+
+#. module: spc
+#: code:addons/spc/models/stock_move.py:0
+#, python-format
+msgid ""
+"There is no correspondence between the number of serials to assign (%d) and "
+"the number of lines in the movement (%d)."
+msgstr ""
+"No hay correspondencia entre el número de seriales para asignar (%d) y el "
+"número de líneas en el movimiento (%d)."
+
+#. module: spc
+#: model:ir.model.fields,help:spc.field_purchase_order__sale_order_id
+msgid "This is the sale order to associate this order's cost with."
+msgstr ""
+"Este es el pedido de venta para asociar los costos de este pedido de compra."
+
+#. module: spc
+#: model:ir.model.fields,help:spc.field_res_partner__property_sale_margin
+#: model:ir.model.fields,help:spc.field_res_users__property_sale_margin
+msgid ""
+"This percentage will be applied to the sale price when an invoice is made to"
+" this customer using the 'Invoice to Country' wizard."
+msgstr ""
+"Este porcentage se aplicará al precio de venta al realizar una factura a "
+"este cliente utilizando el wizard 'Facturar a país'."
 
 #. module: spc
 #: model:ir.actions.act_window,name:spc.action_invoice_line_tree1
@@ -206,23 +283,22 @@ msgid "To be Invoiced to country"
 msgstr "Por facturar a país"
 
 #. module: spc
-#: model:ir.ui.view,arch_db:spc.spc_view_invoice_line_tree
-msgid "Total"
-msgstr "Total"
-
-#. module: spc
-#: code:addons/spc/wizard/account_invoice_create.py:155
+#: code:addons/spc/models/stock_move.py:0
 #, python-format
-msgid "You must first select a partner!"
-msgstr "Primero debe haber seleccionado una empresa!"
+msgid ""
+"To use this feature, you must provide a valid input string. E.g. "
+"ABC012,DEF345,XYZ678"
+msgstr ""
+"Para usar esta característica, debe proporcionar una cadena de entrada "
+"válida. E.j. ABC012,DEF345,XYZ678"
 
 #. module: spc
-#: model:ir.model.fields,field_description:spc.field_purchase_order_sale_order_id
-msgid "Sale order"
-msgstr "Orden de venta"
+#: model_terms:ir.ui.view,arch_db:spc.spc_view_invoice_line_tree
+msgid "Total"
+msgstr ""
 
 #. module: spc
-#: model:ir.model.fields,help:spc.field_purchase_order_sale_order_id
-msgid "This is the sale order to associate this order's cost with."
-msgstr "Esta es la orden de venta para asociar los costos de esta orden de compra."
-
+#: model:product.product,uom_name:spc.product_minor_line
+#: model:product.template,uom_name:spc.product_minor_line_product_template
+msgid "Units"
+msgstr "Unidades"
