@@ -1,13 +1,12 @@
 image: vauxoo/odoo-80-image-shippable-auto
 stages:
-  - test
-  - test_build
+  - main
   - build
 
 variables:
 
 lint:
-  stage: test
+  stage: main
   tags:
     - lint
   variables:
@@ -25,8 +24,8 @@ lint:
     - travis_install_nightly
     - travis_run_tests
 
-test:
-  stage: test
+odoo:
+  stage: main
   coverage: '/^TOTAL.*\s+(\d+\%)$/'
   tags:
     - odoo
@@ -55,27 +54,27 @@ test:
     reports:
       cobertura: $CI_COMMIT_REF_SLUG/coverage.xml
 
+test_build:
+  stage: main
+  image: quay.io/vauxoo/dockerv:latest
+  tags:
+    - build
+  script:
+    - source variables.sh
+    - deployvcmd gitlab_tools check_keys
+    - deployvcmd gitlab_tools test_images
+  artifacts:
+    paths:
+      - $CI_COMMIT_REF_NAME
+
 publish_coverage:
   image: quay.io/vauxoo/dockerv
   stage: build
   allow_failure: true
   dependencies:
-    - test
+    - odoo
   script:
     - deployvcmd gitlab_tools push_coverage
-
   environment:
     name: coverage
     url: https://coverage.vauxoo.com/${CI_COMMIT_REF_SLUG}-${CI_PROJECT_NAME}
-
-build:
-  stage: build
-  image: quay.io/vauxoo/dockerv:latest
-  tags:
-    - build
-
-  script:
-    - source variables.sh
-    - deployvcmd gitlab_tools check_keys
-    - deployvcmd gitlab_tools test_images
-

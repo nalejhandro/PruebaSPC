@@ -8,4 +8,4 @@ export TRAVIS_PYTHON_VERSION="3.6"
 export TRAVIS_REPO_SLUG="Vauxoo/"
 export COUNTRY="CR"
 export CUSTOMER="spc"
-export COVERAGE_MIN=80
+export COVERAGE_MIN=70
