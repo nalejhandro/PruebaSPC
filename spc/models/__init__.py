@@ -6,3 +6,6 @@ from . import crm_lead
 from . import project_task
 from . import helpdesk_ticket
 from . import google_drive
+from . import ir_model_data
+from . import sale_config_settings
+from . import sale_order

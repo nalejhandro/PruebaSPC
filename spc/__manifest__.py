@@ -12,6 +12,7 @@
         'auth_oauth',
         'board',
         'crm',
+        'sale_crm',
         'google_spreadsheet',
         'helpdesk_timesheet',
         'hr_payroll',
@@ -35,8 +36,15 @@
         'views/account_move_views.xml',
         'views/res_partner_views.xml',
         'views/purchase_order_views.xml',
+        #'views/crm_lead_view.xml',
+        'views/sale_config_settings_view.xml',
         'wizards/account_invoice_create_views.xml',
     ],
+    'external_dependencies': {
+        'python': [
+            'oauth2client.client',
+        ],
+    },
     'demo': [
         'demo/res_partner_demo.xml',
     ],
