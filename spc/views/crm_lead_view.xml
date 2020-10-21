@@ -1,164 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-        <record id="view_lead_form" model="ir.ui.view">
-            <field name="name">Lead Form</field>
-            <field name="model">crm.lead</field>
-            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
-            <field name="priority" eval="110"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='planned_revenue']" position="after">
-                    <span> - </span>
-                    <field name="detail_incidentals" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" nolabel="1"/>
-                    <span> = </span>
-                    <field name="detail_total_revenue" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" nolabel="1"/>
-                </xpath>
-                <xpath expr="//form/sheet/div[@class='oe_title']/h2" position="after">
-                    <div>
-                        <br />
-                        <table class="oe_list_content" style="padding-top:20px;padding-bottom:20px;padding-left: 20px">
-                            <thead>
-                                <tr>
-                                    <th><b>Item</b></th>
-                                    <th><b>Cost</b></th>
-                                    <th><b>Price</b></th>
-                                    <th><b>Price + VAT</b></th>
-                                    <th><b>Profit</b></th>
-                                    <th><b>Markup</b></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Products</b></td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_product_cost" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_product_price" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_product_price_vat" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_product_profit" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" name="detail_product_markup" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>Warranty Renewals</b></td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_warranty_cost" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_warranty_price" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_warranty_price_vat" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_warranty_profit" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" name="detail_warranty_markup" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>Service</b></td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_cost" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_price" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_price_vat" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_profit" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" name="detail_service_markup" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>Materials</b></td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_material_cost" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_material_price" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_material_price_vat" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_material_profit" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" name="detail_material_markup" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>Service Expense</b></td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_expense_cost" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_expense_price" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_expense_price_vat" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_expense_profit" />
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <field class="oe_inline" widget="monetary" name="detail_service_expense_markup" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>Total</b></td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <b><field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_total_cost" /></b>
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <b><field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_total_price" /></b>
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <b><field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_total_price_vat" /></b>
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <b><field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_total_profit" /></b>
-                                    </td>
-                                    <td class="oe_list_field_cell oe_list_field_float oe_number">
-                                        <b><field class="oe_inline" widget="monetary" name="detail_total_markup" /></b>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <br />
-                    </div>
-                </xpath>
-                <xpath expr="//form/header/field[@name='stage_id']" position="before">
-                    <button type="object" name="sync_business_case" string="Sync Business Case"/>
-                </xpath>
-                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='referred']" position="after">
-                    <field name="change_company_id" groups="base.group_multi_company"/>
-                </xpath>
-                <xpath expr="//form/sheet/notebook/page[1]/field[@name='description']" position="after">
-                    <separator/>
-                    <label for="client_requirement"/>
-                    <field name="client_requirement"/>
-                    <label for="project_scope"/>
-                    <field name="project_scope"/>
-                    <label for="success_factors"/>
-                    <field name="success_factors"/>
-                    <label for="items_out_of_reach"/>
-                    <field name="items_out_of_reach"/>
-                    <label for="observation"/>
-                    <field name="observation"/>
-                </xpath>
-            </field>
-        </record>
+    <record id="view_lead_form" model="ir.ui.view">
+        <field name="name">Lead Form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="priority" eval="110"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='planned_revenue']" position="after">
+                <span> - </span>
+                <field name="detail_incidentals" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" nolabel="1"/>
+                <span> = </span>
+                <field name="detail_total_revenue" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" nolabel="1"/>
+            </xpath>
+            <xpath expr="//form/sheet/div[hasclass('oe_title')]/h2" position="after">
+                <div>
+                    <br />
+                    <table class="oe_list_content" style="padding-top:20px;padding-bottom:20px;padding-left: 20px">
+                        <thead>
+                            <tr>
+                                <th><b>Item</b></th>
+                                <th><b>Cost</b></th>
+                                <th><b>Price</b></th>
+                                <th><b>Price + VAT</b></th>
+                                <th><b>Profit</b></th>
+                                <th><b>Markup</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Products</b></td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_product_cost" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_product_price" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_product_price_vat" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_product_profit" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" name="detail_product_markup" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Warranty Renewals</b></td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_warranty_cost" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_warranty_price" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_warranty_price_vat" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_warranty_profit" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" name="detail_warranty_markup" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Service</b></td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_cost" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_price" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_price_vat" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_profit" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" name="detail_service_markup" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Materials</b></td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_material_cost" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_material_price" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_material_price_vat" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_material_profit" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" name="detail_material_markup" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Service Expense</b></td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_expense_cost" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_expense_price" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_expense_price_vat" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_service_expense_profit" />
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <field class="oe_inline" widget="monetary" name="detail_service_expense_markup" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Total</b></td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <b><field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_total_cost" /></b>
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <b><field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_total_price" /></b>
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <b><field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_total_price_vat" /></b>
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <b><field class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" name="detail_total_profit" /></b>
+                                </td>
+                                <td class="oe_list_field_cell oe_list_field_float oe_number">
+                                    <b><field class="oe_inline" widget="monetary" name="detail_total_markup" /></b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                </div>
+            </xpath>
+            <xpath expr="//form/header/field[@name='stage_id']" position="before">
+                <button type="object" name="sync_business_case" string="Sync Business Case"/>
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page/group/group/field[@name='referred']" position="after">
+                <field name="change_company_id" groups="base.group_multi_company"/>
+            </xpath>
+            <xpath expr="//page/field[@name='description']" position="after">
+                <separator/>
+                <label for="client_requirement"/>
+                <field name="client_requirement"/>
+                <label for="project_scope"/>
+                <field name="project_scope"/>
+                <label for="success_factors"/>
+                <field name="success_factors"/>
+                <label for="items_out_of_reach"/>
+                <field name="items_out_of_reach"/>
+                <label for="observation"/>
+                <field name="observation"/>
+            </xpath>
+        </field>
+    </record>
 </odoo>

@@ -17,6 +17,10 @@ REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
 class ResCompany(models.Model):
     _inherit = 'res.company'
 
+    bc_template = fields.Many2one('google.drive.config', string='BC Template')
+    bc_authorization_code = fields.Char('BC Sync Authorization Code')
+    bc_uri = fields.Char('BC Sync URI', compute='_compute_bc_uri')
+
     @api.depends('bc_authorization_code')
     def _compute_bc_uri(self):
         flow = OAuth2WebServerFlow(
@@ -27,10 +31,6 @@ class ResCompany(models.Model):
         auth_uri = flow.step1_get_authorize_url()
         for config in self:
             config.bc_uri = auth_uri
-
-    bc_template = fields.Many2one('google.drive.config', string='BC Template')
-    bc_authorization_code = fields.Char('BC Sync Authorization Code')
-    bc_uri = fields.Char('BC Sync URI', compute='_compute_bc_uri')
 
 
 class ResConfigSettings(models.TransientModel):

@@ -1,1 +1,3 @@
 enterprise git@github.com:Vauxoo/enterprise.git
+brand git@github.com:Vauxoo/brand.git
+project git@github.com:Vauxoo/project.git

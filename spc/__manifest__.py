@@ -6,7 +6,6 @@
     'category': 'Installer',
     'summary': 'SPC Internacional App for customizations',
     'depends': [
-        'analytic',
         'account_accountant',
         'account_budget',
         'attachment_indexation',
@@ -28,8 +27,10 @@
         'survey',
         'website_forum',
         'website_helpdesk',
+        'product_brand',
     ],
     'data': [
+        'security/ir.model.access.csv',
         'data/product_data.xml',
         'security/spc_security.xml',
         'views/stock_move_views.xml',
@@ -37,7 +38,8 @@
         'views/res_partner_views.xml',
         'views/purchase_order_views.xml',
         'views/crm_lead_view.xml',
-        'views/sale_config_settings_view.xml',
+        'views/res_config_settings_views.xml',
+        'views/spc_crm_lead_manufacturer.xml',
         'wizards/account_invoice_create_views.xml',
     ],
     'external_dependencies': {
@@ -51,4 +53,5 @@
     'installable': True,
     'auto_install': False,
     'application': True,
+    'pre_init_hook': 'pre_init_hook',
 }

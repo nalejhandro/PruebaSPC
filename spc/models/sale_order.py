@@ -18,8 +18,8 @@ class SaleOrder(models.Model):
             res.name = "%s-%s" % (res.name, res.opportunity_id.id)
         return res
 
-    # The following method is brought from the module spc_sale_followers
     def message_subscribe(self, partner_ids=None, channel_ids=None, subtype_ids=None, force=True):
+        """The following method is brought from the module spc_sale_followers"""
         for partner in partner_ids:
             if partner == self.partner_id.id:
                 _logger.info("Removed partner %s from sale.order %s in subscribe followers.", partner, self.id)

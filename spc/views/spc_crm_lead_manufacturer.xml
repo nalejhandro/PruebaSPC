@@ -1,0 +1,25 @@
+<odoo>
+    <record id="spc_crm_lead_manufacturer" model="ir.ui.view">
+        <field name="name">SPC CRM Lead Manufacturer</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/div[hasclass('oe_title')]/h2" position="after">
+                <field name="manufacturer_line_ids" nolabel="1">
+                    <tree editable="bottom" >
+                        <field name="product_brand_id" required="True" />
+                        <field name="code" required="True"/>
+                        <field name="estimate" sum="Estimate Total" required="True"/>
+                    </tree>
+                </field>
+            </xpath>
+            <xpath expr="//field[@name='date_deadline']" position="after">
+                <field name="main_unit" required="True" />
+            </xpath>
+            <xpath expr="//field[@name='date_deadline']" position="attributes">
+                <attribute name="required">True</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

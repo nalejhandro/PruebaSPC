@@ -11,8 +11,8 @@ class CrmLead(models.Model):
         readonly=True
     )
 
-    # The following method is brought from the module spc_sale_followers
     def message_get_suggested_recipients(self):
+        """The following method is brought from the module spc_sale_followers"""
         recipients = super(CrmLead, self).message_get_suggested_recipients()
         for lead_id, data in recipients.items():
             if data:
@@ -25,17 +25,7 @@ class CrmLead(models.Model):
         return super(CrmLead, self).write(vals)
 
     def _get_selection_values(self):
-        companies = self.env.user.company_ids
-        return companies.mapped(lambda x: (x.id, x.name))
-
-    @api.depends('company_id')
-    def _compute_change_company_id(self):
-        for lead in self:
-            lead.change_company_id = False
-
-    def _inverse_change_company_id(self):
-        for lead in self:
-            lead.company_id = lead.change_company_id
+        return self.env.companies.mapped(lambda x: (x.id, x.name))
 
     change_company_id = fields.Selection(
         selection=_get_selection_values, string='Change Company', compute='_compute_change_company_id',
@@ -81,15 +71,15 @@ class CrmLead(models.Model):
     main_unit = fields.Selection([
         ('cibersecurity', 'CyberSecurity'), ('datacenter', 'DataCenter'),
         ('it_services', 'IT Services'), ('networking', 'Networking')],
-        string='Principal Address', oldname='principal_address')
+        string='Principal Address')
     manufacturer_line_ids = fields.One2many(
         'spc.crm.lead.manufacturer.line', 'lead_id', string='Manufacturer')
 
+    @api.depends('company_id')
+    def _compute_change_company_id(self):
+        for lead in self:
+            lead.change_company_id = False
 
-class CRMManufacturerLine(models.Model):
-    _name = 'spc.crm.lead.manufacturer.line'
-
-    lead_id = fields.Many2one('crm.lead', string='Lead')
-    product_brand_id = fields.Many2one('product.brand', string='Manufacturer')
-    code = fields.Char()
-    estimate = fields.Float(string='Estimate %')
+    def _inverse_change_company_id(self):
+        for lead in self:
+            lead.company_id = lead.change_company_id
