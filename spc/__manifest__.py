@@ -28,6 +28,7 @@
         'website_forum',
         'website_helpdesk',
         'product_brand',
+        'project_task_default_stage',
     ],
     'data': [
         'security/ir.model.access.csv',
