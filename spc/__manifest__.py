@@ -6,6 +6,7 @@
     'category': 'Installer',
     'summary': 'SPC Internacional App for customizations',
     'depends': [
+        'l10n_cr',
         'account_accountant',
         'account_budget',
         'attachment_indexation',
