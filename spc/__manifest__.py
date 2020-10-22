@@ -23,6 +23,7 @@
         'purchase_requisition',
         'sale_product_configurator',
         'sale_subscription',
+        'spc_sale_costs',
         'stock_dropshipping',
         'stock_landed_costs',
         'survey',
