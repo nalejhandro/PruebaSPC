@@ -11,4 +11,5 @@ from . import sale_order
 from . import sale_subscription
 from . import res_company
 from . import analytic_account
+from . import account_journal
 from . import spc_crm_lead_manufacturer_line
