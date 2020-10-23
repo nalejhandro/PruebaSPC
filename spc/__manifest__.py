@@ -46,6 +46,7 @@
         'views/helpdesk_team_view.xml',
         'views/project_task_view.xml',
         'views/purchase_order_templates.xml',
+        'views/res_company_view.xml',
         'wizards/account_invoice_create_views.xml',
     ],
     'external_dependencies': {

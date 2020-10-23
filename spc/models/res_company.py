@@ -22,6 +22,15 @@ class ResCompany(models.Model):
     bc_template = fields.Many2one('google.drive.config', string='BC Template')
     bc_authorization_code = fields.Char('BC Sync Authorization Code')
     bc_uri = fields.Char('BC Sync URI', compute='_compute_bc_uri')
+    prefix = fields.Char('Prefix', size=10, default='')
+
+    def name_get(self):
+        res = dict(super(ResCompany, self).name_get())
+        for company in self.browse(res.keys()):
+            company_name = "%s " % company.prefix if company.prefix else ''
+            company_name += company.name
+            res[company.id] = company_name
+        return list(res.items())
 
     @api.depends('bc_authorization_code')
     def _compute_bc_uri(self):
