@@ -4,7 +4,7 @@
 {
     'name': 'Stock Account Move Line',
     'summary': 'Unit price on journal items',
-    'version': '12.0.0.1.0',
+    'version': '13.0.0.1.0',
     'category': 'Technical Settings',
     'website': 'http://clearcorp.cr',
     'author': 'Vauxoo, ClearCorp',

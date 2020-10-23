@@ -13,6 +13,10 @@
             <xpath expr="//field[@name='currency_id']" position="after">
                 <field name="manual_move"/>
             </xpath>
+
+            <field name="invoice_date" position="before">
+                <field name="name" string="Número manual de factura" attrs="{'invisible': [('state','!=','draft')]}"/>
+            </field>
         </field>
     </record>
 
@@ -46,6 +50,7 @@
         <field name="arch" type="xml">
             <tree create="false" delete="false" edit="false">
                 <field name="name"/>
+                <field name="move_id"/>
                 <field name="account_id" groups="account.group_account_user"/>
                 <field name="quantity"/>
                 <field name="product_uom_id" groups="uom.group_uom"/>
@@ -96,4 +101,16 @@
         sequence="10"
         groups="spc.group_invoice_to_country"/>
 
+        <!-- search -->
+    <record id="view_account_move_line_filter" model="ir.ui.view">
+        <field name="name">Account move line Search</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_account_move_line_filter" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <xpath expr="//search/field[@name='partner_id']" position="after">
+                <field name="move_id" filter_domain="['|', ('move_id.name','ilike',self), ('move_id.reference','ilike',self)]" string="Invoice"/>
+            </xpath>
+        </field>
+    </record>
 </odoo>

@@ -4,7 +4,7 @@
 {
     'name': 'SPC Sale Costs',
     'summary': 'Costs for SPC Sales',
-    'version': '12.0.0.1.0',
+    'version': '13.0.0.1.0',
     'category': 'Sales Management',
     'author': 'ClearCorp, Vauxoo',
     'license': 'AGPL-3',

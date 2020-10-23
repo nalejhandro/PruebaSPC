@@ -32,7 +32,7 @@ class AccountMoveLine(models.Model):
                 unit_cost, currency)
         return unit_cost_currency
 
-    unit_cost = fields.Float('Unit Cost')
-    unit_cost_currency = fields.Float('Unit Cost Currency')
+    unit_cost = fields.Float()
+    unit_cost_currency = fields.Float()
     stock_move_id = fields.Many2one('stock.move', string='Stock Move')
     stock_picking_id = fields.Many2one('stock.picking', string='Stock Picking')

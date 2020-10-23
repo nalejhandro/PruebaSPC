@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_purchaseorder_document" inherit_id="purchase.report_purchaseorder_document" priority="100">
+        <xpath expr="//div[hasclass('page')]/table/thead/tr/th[3]" position="replace" />
+        <xpath expr="//div[hasclass('page')]/table/tbody//td[3]" position="replace" />
+        <xpath expr="//div[hasclass('page')]/div[3]" position="replace">
+            <div class="row mt32 mb32">
+                <div t-if="o.name" class="col-xs-3">
+                    <strong>SPC internal Reference:</strong>
+                    <p t-field="o.name"/>
+                </div>
+                <div t-if="o.partner_ref" class="col-xs-3">
+                    <strong>Order reference:</strong>
+                    <p t-field="o.partner_ref"/>
+                </div>
+                    <div t-if="o.date_order" class="col-xs-3">
+                    <strong>Order Date:</strong>
+                    <p t-field="o.date_order"/>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('page')]/h2[1]/span[@t-field='o.name']" position="attributes">
+            <attribute name="t-field">o.partner_ref</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('page')]/h2[2]/span[@t-field='o.name']" position="attributes">
+            <attribute name="t-field">o.partner_ref</attribute>
+        </xpath>
+    </template>
+
+</odoo>

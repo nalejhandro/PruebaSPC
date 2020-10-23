@@ -85,7 +85,7 @@ OUR_MODULES = {
     website_livechat web resource mail calendar fetchmail gamification product
     hr im_livechat portal hr_payroll account_asset hr_holidays website helpdesk
     sale_stock phone_validation sale_timesheet sale_subscription l10n_cr spc
-    project_task_default_stage product_brand
+    project_task_default_stage product_brand spc_sale_costs stock_account_move_line
     """.split(),
 }
 
@@ -371,8 +371,8 @@ class App(object):
         self.cr.execute("""
             UPDATE ir_module_module SET state = 'uninstalled' WHERE name in (
                 'spc_crm_lead_manufacturer', 'spc_account_invoice_line', 'spc_purchase_order', 'spc_manual_move', 'spc_analytic',
-                'spc_sale_costs', 'spc_sale_followers', 'spc_crm', 'account_journal_extended_code', 'account_invoice_discount',
-                'stock_account_move_line', 'stock_requisition_group', 'base_company_prefix',
+                'spc_sale_followers', 'spc_crm', 'account_journal_extended_code', 'account_invoice_discount',
+                'stock_requisition_group', 'base_company_prefix',
                 'export_fields', 'database_cleanup');
             """)
         self.cr.execute("""

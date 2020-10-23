@@ -43,6 +43,9 @@
         'views/crm_lead_view.xml',
         'views/res_config_settings_views.xml',
         'views/spc_crm_lead_manufacturer.xml',
+        'views/helpdesk_team_view.xml',
+        'views/project_task_view.xml',
+        'views/purchase_order_templates.xml',
         'wizards/account_invoice_create_views.xml',
     ],
     'external_dependencies': {
