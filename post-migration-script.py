@@ -118,7 +118,7 @@ class App(object):
         self.delete_obsolete_objects_from_data()
         self.delete_obsolete_actions_server()
         self.handle_attachment_linked_to_unknown_models()
-        self.remove_custom_views_without_data()
+        # self.remove_custom_views_without_data()
         self.remove_bank_account_without_partner()
         self.remove_orphan_groups()
         self.clean_menus()
@@ -208,9 +208,22 @@ class App(object):
         if self.table_exists('eco_static_view'):
             self.cr.execute("delete from eco_static_view")
         self.cr.execute("""\
-            delete from ir_ui_view
+            SELECT id from ir_ui_view
             where id not in (
-                select res_id from ir_model_data where model='ir.ui.view') and id not in (SELECT view_template_id FROM payment_acquirer)""")
+                select res_id from ir_model_data where model='ir.ui.view') and id not in (SELECT view_template_id FROM payment_acquirer)
+                        and id not in (
+                        select res_id from ir_model_data where model='ir.ui.view' and name in (
+                        'ir_ui_view_3093_a661f9b0',
+                        'ir_ui_view_1346_7e8b678d',
+                        'ir_ui_view_3104_c18a20dc',
+                        'ir_ui_view_2665_815ca56c',
+                        'ir_ui_view_1315_dd12a754',
+                        'ir_ui_view_3095_25137f35',
+                        'ir_ui_view_3096_6469b973',
+                        'ir_ui_view_3097_509cb13e'))""")
+        views = self.cr.fetchall()
+        for view in views:
+            self.delete_views(view[0])
 
     def clean_attachments(self):
         self.cr.execute("select distinct(res_model) from ir_attachment")
