@@ -22,7 +22,7 @@ class ResCompany(models.Model):
     bc_template = fields.Many2one('google.drive.config', string='BC Template')
     bc_authorization_code = fields.Char('BC Sync Authorization Code')
     bc_uri = fields.Char('BC Sync URI', compute='_compute_bc_uri')
-    prefix = fields.Char('Prefix', size=10, default='')
+    prefix = fields.Char(size=10, default='')
 
     def name_get(self):
         res = dict(super(ResCompany, self).name_get())

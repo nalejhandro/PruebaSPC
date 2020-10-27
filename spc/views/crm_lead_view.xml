@@ -159,6 +159,26 @@
                 <label for="observation"/>
                 <field name="observation"/>
             </xpath>
+            <field name="name" position="before">
+                <field class="oe_inline" name="id" />
+                <span class="oe_grey"> - </span>
+            </field>
+            <field name="name" position="attributes">
+                <attribute name="class">oe_inline</attribute>
+            </field>
+            <h1 position="after">
+                <h2>
+                    <label for="change_company_id" class="oe_edit_only"/>
+                    <field name="company_id" class="oe_read_only"/>
+                    <field name="change_company_id" class="oe_edit_only"/>
+                </h2>
+            </h1>
+            <field name="planned_revenue" position="before">
+                <span class="oe_grey">Sale: </span>
+            </field>
+            <field name="day_close" position="after">
+                <field name="date_closed"/>
+            </field>
         </field>
     </record>
 
@@ -168,7 +188,7 @@
         <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
         <field name="arch" type="xml">
             <field name="name" position="before">
-                <field name="id" />: 
+                <field name="id" />:
             </field>
             <field name="partner_id" position="after">
                 <br />

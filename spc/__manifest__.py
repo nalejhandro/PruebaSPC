@@ -35,6 +35,7 @@
     'data': [
         'security/ir.model.access.csv',
         'data/product_data.xml',
+        'data/settings.xml',
         'security/spc_security.xml',
         'views/stock_move_views.xml',
         'views/account_move_views.xml',
@@ -47,6 +48,7 @@
         'views/project_task_view.xml',
         'views/purchase_order_templates.xml',
         'views/res_company_view.xml',
+        'views/sale_order_view.xml',
         'wizards/account_invoice_create_views.xml',
     ],
     'external_dependencies': {

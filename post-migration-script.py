@@ -211,16 +211,7 @@ class App(object):
             SELECT id from ir_ui_view
             where id not in (
                 select res_id from ir_model_data where model='ir.ui.view') and id not in (SELECT view_template_id FROM payment_acquirer)
-                        and id not in (
-                        select res_id from ir_model_data where model='ir.ui.view' and name in (
-                        'ir_ui_view_3093_a661f9b0',
-                        'ir_ui_view_1346_7e8b678d',
-                        'ir_ui_view_3104_c18a20dc',
-                        'ir_ui_view_2665_815ca56c',
-                        'ir_ui_view_1315_dd12a754',
-                        'ir_ui_view_3095_25137f35',
-                        'ir_ui_view_3096_6469b973',
-                        'ir_ui_view_3097_509cb13e'))""")
+                        and id not in (3093, 1346, 3104, 2665, 1315, 3095, 3096, 3097)""")
         views = self.cr.fetchall()
         for view in views:
             self.delete_views(view[0])
@@ -462,7 +453,95 @@ class App(object):
                 AND name = 'product_product_44494_771f907d';
         """)
 
+        self.cr.execute("""
+            UPDATE
+                ir_ui_view
+            SET
+                model='account.move',
+                active=True,
+                mode='extension',
+                inherit_id=(SELECT res_id from ir_model_data where module='account' and name = 'view_move_form' and model='ir.ui.view'),
+                arch_db =%s
+            WHERE
+                id=3093
+        """, ('''
+<data>
+    <xpath expr="//page[@id='other_tab']//field[@name='invoice_incoterm_id']" position="before">
+    <field name="x_open_uid"/>
+    </xpath>
+</data>
+            ''',))
 
+        self.cr.execute("""
+            UPDATE
+                ir_ui_view
+            SET
+                active=True,
+                arch_db = %s
+            WHERE
+                id=2665
+        """, ('''
+                <data>
+                    <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
+                    <attribute name="groups">x.sale_validar_pedidos</attribute>
+                    </xpath>
+                    <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
+                    <attribute name="groups">x.sale_validar_pedidos</attribute>
+                    </xpath>
+                    <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="groups">x.sale_validar_pedidos</attribute>
+                    </xpath>
+
+                    <field name="date_order" position="after">
+                    <field name="x_fecha_prevista_facturacion" attrs="{'required':[['state','in',['draft','sent']]]}"/>
+                    <field name="x_fecha_recepcion_oc" attrs="{'required':[['state','in',['draft','sent']]]}"/>
+                    </field>
+
+                    <field name="analytic_account_id" position="after">
+                    <field name="x_total_cost"/>
+                    <field name="x_total_price"/>
+                    <field name="x_contribution_margin"/>
+                    </field>
+                </data>
+                ''',))
+
+        self.cr.execute("""
+            UPDATE
+                ir_ui_view
+            SET
+                active=True,
+                inherit_id=(SELECT res_id from ir_model_data where module='sale_crm' and name = 'crm_case_form_view_oppor' and model='ir.ui.view'),
+                arch_db = %s
+            WHERE
+                id=1315
+        """, ('''
+              <data>
+                <field name="user_id" position="after">
+                    <field name="x_preventa_id" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'base.group_sale_salesman_all_leads']}"/>
+                    <field name="x_ticket_id" readonly="1"/>
+                    <field name="x_contract_manager_id" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'base.group_sale_salesman_all_leads']}"/>
+                    <field name="x_ticket_contract_manager_id" readonly="1"/>
+                </field>
+
+                <field name="planned_revenue" position="after">
+                <span class="oe_grey"> | MC: </span>
+                    <field name="x_planned_contribution_margin" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}" />
+                </field>
+
+                <field name="tag_ids" position="after">
+                    <field name="x_bussiness_model"/>
+                    <field name="x_contract_periods"/>
+                    <field name="x_billed_period"/>
+                    <field name="x_billed_date_start"/>
+                </field>
+                <header position="inside">
+                  <field name="x_has_user_company" invisible="1"/>
+                </header>
+                <button  name="action_sale_quotations_new" position="attributes">
+                  <attribute name="attrs">{'invisible': [('x_has_user_company','=',False)]}</attribute>
+                </button>
+              </data>
+                ''',))
 
     def remove_constraint(self):
         self.cr.execute("""

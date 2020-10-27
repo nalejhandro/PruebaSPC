@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings" model="res.config.settings">
+        <field name="module_sale_product_configurator" eval="True"/>
+    </record>
+
+    <function
+        model="res.config.settings"
+        name="execute"
+        eval="[[ref('res_config_settings')]]"/>
+
+</odoo>
