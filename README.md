@@ -1,6 +1,6 @@
 [![Build Status](https://git.vauxoo.com/vauxoo/spc/badges/13.0/build.svg)](https://git.vauxoo.com/vauxoo/spc/pipelines)
 [![Coverage Report](https://git.vauxoo.com/vauxoo/spc/badges/13.0/coverage.svg)](https://coverage.vauxoo.com/13-0-spc)
-[![Runbot Status](http://runbot.vauxoo.com/runbot/badge/109/13.0.svg)](http://runbot.vauxoo.com/runbot/repo/git-git-vauxoo-com-vauxoo-spc-git-109)
+[![Runbot Status](http://runbot.vauxoo.com/runbot/badge/195/13.0.svg)](https://runbot.vauxoo.com/runbot/repo/git-git-vauxoo-com-vauxoo-spc-git-195)
 
 
 
