@@ -25,4 +25,4 @@ class SaleOrder(models.Model):
             if partner == self.partner_id.id:
                 _logger.info("Removed partner %s from sale.order %s in subscribe followers.", partner, self.id)
                 partner_ids.remove(partner)
-        return super(SaleOrder, self).message_subscribe(partner_ids, channel_ids, subtype_ids, force)
+        return super(SaleOrder, self).message_subscribe(partner_ids, channel_ids, subtype_ids)
