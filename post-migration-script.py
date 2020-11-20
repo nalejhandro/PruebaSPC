@@ -543,6 +543,73 @@ class App(object):
               </data>
                 ''',))
 
+        self.cr.execute("""
+            UPDATE
+                ir_act_server
+            SET
+                code = %s
+            WHERE
+                id=1392
+        """, ('''
+helpdesk_preventa = env.ref("__export__.helpdesk_team_preventa")
+ticket_type_preventa = env.ref("__export__.ticket_type_preventa").id
+
+for lead in records.filtered(lambda r: not r.x_ticket_id and r.x_preventa_id):
+  ticket = env["helpdesk.ticket"].sudo().create({
+    "name": "[%s] %s" % (lead.id, lead.name),
+    "team_id": helpdesk_preventa.id,
+    "project_id": helpdesk_preventa.project_id.id,
+    "user_id": lead.x_preventa_id.id,
+    "company_id": lead.company_id.id,
+    "partner_id": lead.partner_id and lead.partner_id.id or False,
+    "ticket_type_id": ticket_type_preventa,
+    "description": "Ticket para diseño preventa de oportunidad: %s - %s" % (lead.id, lead.name),
+    "x_lead_id": lead.id,
+  })
+  lead.write({"x_ticket_id": ticket.id})
+                ''',))
+
+        self.cr.execute("""
+            UPDATE
+                ir_act_server
+            SET
+                code = %s
+            WHERE
+                id=1397
+        """, ('''
+helpdesk_contract_manager = env.ref("__export__.helpdesk_team_18_9de75a62")
+ticket_type_contract_manager = env.ref("__export__.ticket_type_contract_manager").id
+
+for lead in records.filtered(lambda r: not r.x_ticket_contract_manager_id and r.x_contract_manager_id):
+  ticket = env["helpdesk.ticket"].sudo().create({
+    "name": "[%s] %s" % (lead.id, lead.name),
+    "team_id": helpdesk_contract_manager.id,
+    "project_id": helpdesk_contract_manager.project_id.id,
+    "user_id": lead.x_contract_manager_id.id,
+    "company_id": lead.company_id.id,
+    "partner_id": lead.partner_id and lead.partner_id.id or False,
+    "ticket_type_id": ticket_type_contract_manager,
+    "description": "Ticket para contract manager de oportunidad: %s - %s" % (lead.id, lead.name),
+    "x_lead_id": lead.id,
+  })
+  lead.write({"x_ticket_contract_manager_id": ticket.id})
+                ''',))
+
+        self.cr.execute("""
+            UPDATE
+                ir_act_server
+            SET
+                code = %s
+            WHERE
+                id=1077
+        """, ('''
+debates = env["mail.message.subtype"].search([("id", "=", 1)])
+record.message_post(body="<b>Oportunidad %s:</b> Preventa Asignado" % record.id, subtype="mail.mt_comment")
+
+record.message_subscribe(record.x_preventa_id.partner_id.ids)
+
+                ''',))
+
     def remove_constraint(self):
         self.cr.execute("""
             ALTER TABLE payment_acquirer DROP CONSTRAINT payment_acquirer_view_template_id_fkey;
