@@ -2,7 +2,7 @@
 <odoo>
     <!-- Create an invoice from several invoice lines -->
 
-    <record id="view_account_invoice_create_from_invoice_lines" model="ir.ui.view">
+    <record id="view_account_invoice_create_from_invoice_lines_wizard" model="ir.ui.view">
         <field name="name">account.invoice.create.wizard</field>
         <field name="model">account.invoice.create</field>
         <field name="arch" type="xml">
