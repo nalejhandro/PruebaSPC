@@ -69,7 +69,7 @@ OUR_MODULES = {
     project_timesheet_synchro website_rating crm_enterprise sale_enterprise
     snailmail_account_followup stock_account_enterprise stock stock_enterprise
     hr_payroll_account web_cohort base_automation base_automation_hr_contract
-    crm_livechat website_mail sale_product_configurator
+    crm_livechat website_mail
     account account_accountant stock_sms timesheet_grid sale_timesheet_purchase
     website_sms crm website_forum hr_holidays_calendar sale_purchase
     im_livechat_enterprise utm website_profile web_tour web_map web_dashboard

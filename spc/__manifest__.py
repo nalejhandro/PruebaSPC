@@ -21,7 +21,6 @@
         'l10n_cr',
         'ocn_client',
         'purchase_requisition',
-        'sale_product_configurator',
         'sale_subscription',
         'spc_sale_costs',
         'stock_dropshipping',
@@ -35,7 +34,6 @@
     'data': [
         'security/ir.model.access.csv',
         'data/product_data.xml',
-        'data/settings.xml',
         'security/spc_security.xml',
         'views/stock_move_views.xml',
         'views/account_move_views.xml',
