@@ -3,3 +3,4 @@
 
 from . import picking, sale_order, picking_type, account
 from . import move_line, stock_move, stock_quant
+from . import res_company, res_config_settings

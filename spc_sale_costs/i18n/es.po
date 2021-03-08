@@ -1,0 +1,211 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* spc_sale_costs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-11 14:16+0000\n"
+"PO-Revision-Date: 2020-12-11 14:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_account_account
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: spc_sale_costs
+#: model:res.groups,name:spc_sale_costs.group_manual_fix
+msgid "Permite corregir errores de costo y período en pedidos de venta"
+msgstr ""
+
+#. module: spc_sale_costs
+#: model:res.groups,name:spc_sale_costs.group_reassign_costs
+msgid "Permite reasignar períodos de costo en órdenes de venta"
+msgstr ""
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_res_company__company_user_id
+#: model:ir.model.fields,field_description:spc_sale_costs.field_res_config_settings__company_user_id
+msgid "Company User"
+msgstr "Compañía de usuario"
+
+#. module: spc_sale_costs
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.res_config_settings_view_form
+msgid "Company for records on other companies"
+msgstr "Compañía para registros de otras Compañías"
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de Configuración"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_sale_order__cost_error
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.view_sale_order_search
+msgid "Cost Error"
+msgstr "Error de Costo"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_sale_order__cost_line_ids
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.view_sale_order_form
+msgid "Cost Lines"
+msgstr "Líneas de Costo"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_sale_order__cost_error_manual_time
+msgid "Corrección manual de costos"
+msgstr ""
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_sale_order__cost_picking_ids
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.view_sale_order_form
+msgid "Cost Pickings"
+msgstr "Costo de albarán"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_account_move_line__cost_sale_order_id
+#: model:ir.model.fields,field_description:spc_sale_costs.field_stock_picking__cost_sale_order_id
+msgid "Cost Sale Order"
+msgstr "Costo de Orden de Venta"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_account_account__cost_on_sale_order
+#: model:ir.model.fields,field_description:spc_sale_costs.field_stock_picking_type__cost_on_sale_order
+msgid "Costo en pedidos de venta"
+msgstr ""
+
+#. module: spc_sale_costs
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.view_sale_order_form
+msgid "Costs"
+msgstr "Costos"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields.selection,name:spc_sale_costs.selection__sale_order__cost_error__error
+#: model:ir.model.fields.selection,name:spc_sale_costs.selection__sale_order__period_error__error
+msgid "Error"
+msgstr "Errores"
+
+#. module: spc_sale_costs
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.res_config_settings_view_form
+msgid "Group for records on other companies"
+msgstr "Grupo para registros de otras Compañías"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_sale_order__income_line_ids
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.view_sale_order_form
+msgid "Income Lines"
+msgstr "Líneas de ingresos"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_account_account__income_on_sale_order
+msgid "Income on Sale Orders"
+msgstr "Ingresos por órdenes de venta"
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields.selection,name:spc_sale_costs.selection__sale_order__cost_error__manual
+#: model:ir.model.fields.selection,name:spc_sale_costs.selection__sale_order__period_error__manual
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.view_sale_order_form
+msgid "Manual"
+msgstr "Manual"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields.selection,name:spc_sale_costs.selection__sale_order__cost_error__nd
+msgid "N/D"
+msgstr "N/D"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields.selection,name:spc_sale_costs.selection__sale_order__cost_error__ok
+#: model:ir.model.fields.selection,name:spc_sale_costs.selection__sale_order__period_error__ok
+msgid "OK"
+msgstr "OK"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_sale_order__period_error
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.view_sale_order_search
+msgid "Period Error"
+msgstr "Error de período"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_sale_order__period_error_manual_time
+msgid "Period Manual Fix"
+msgstr "Período de corrección manual"
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Tipo de albarán"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_sale_order__profit_percentage
+msgid "Profit Percentage"
+msgstr ""
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_stock_quant
+msgid "Quants"
+msgstr ""
+
+#. module: spc_sale_costs
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.view_sale_order_form
+msgid "Reassign Sale Costs"
+msgstr ""
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento stock"
+
+#. module: spc_sale_costs
+#: model:ir.model,name:spc_sale_costs.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,help:spc_sale_costs.field_res_company__company_user_id
+#: model:ir.model.fields,help:spc_sale_costs.field_res_config_settings__company_user_id
+msgid "User Company for SPC"
+msgstr "Compañía del Usuario para SPC"
+
+#. module: spc_sale_costs
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.res_config_settings_view_form
+msgid "User Company for SPC:"
+msgstr "Compañía del Usuario para SPC:"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,field_description:spc_sale_costs.field_res_company__user_group_id
+#: model:ir.model.fields,field_description:spc_sale_costs.field_res_config_settings__user_group_id
+msgid "User Group"
+msgstr "Grupo del Usuario"
+
+#. module: spc_sale_costs
+#: model:ir.model.fields,help:spc_sale_costs.field_res_company__user_group_id
+#: model:ir.model.fields,help:spc_sale_costs.field_res_config_settings__user_group_id
+msgid "User group for SPC"
+msgstr "Grupo del usuario para SPC"
+
+#. module: spc_sale_costs
+#: model_terms:ir.ui.view,arch_db:spc_sale_costs.res_config_settings_view_form
+msgid "User group for SPC:"
+msgstr "Grupo del usuario para SPC:"
