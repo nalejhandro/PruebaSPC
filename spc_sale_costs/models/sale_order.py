@@ -40,7 +40,7 @@ class SaleOrder(models.Model):
             # Get income lines
             move_ids = []
             for invoice in order.invoice_ids:
-                move_ids.append(invoice_id.id)
+                move_ids.append(invoice.id)
             income_move_lines = self.env[
                 'account.move.line'].search(
                 [('move_id', 'in', move_ids),
