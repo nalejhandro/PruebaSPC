@@ -14,8 +14,8 @@
                 <field name="manual_move"/>
             </xpath>
 
-            <field name="invoice_date" position="before">
-                <field name="name" string="Número manual de factura" attrs="{'invisible': [('state','!=','draft')]}"/>
+            <field name="ref" position="before">
+                <field name="invoice_sequence_number_next" string="Número manual de factura" attrs="{'invisible': [('type', '!=', 'out_invoice')], 'readonly': [('state', '!=', 'draft')]}"/>
             </field>
         </field>
     </record>

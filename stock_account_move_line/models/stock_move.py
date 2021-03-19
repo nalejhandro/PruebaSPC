@@ -8,9 +8,9 @@ class StockMove(models.Model):
 
     _inherit = "stock.move"
 
-    def _prepare_account_move_line(self, qty, cost, credit_account_id, debit_account_id):
+    def _prepare_account_move_line(self, qty, cost, credit_account_id, debit_account_id, description):
 
-        res = super(StockMove, self)._prepare_account_move_line(qty, cost, credit_account_id, debit_account_id)
+        res = super(StockMove, self)._prepare_account_move_line(qty, cost, credit_account_id, debit_account_id, description)
         if not res:
             return res
 
