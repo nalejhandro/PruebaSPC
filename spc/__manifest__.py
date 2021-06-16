@@ -1,6 +1,6 @@
 {
     'name': 'SPC Internacional App',
-    'version': '13.0.1.0.3',
+    'version': '13.0.1.0.4',
     "author": "Vauxoo",
     "license": "LGPL-3",
     'category': 'Installer',
@@ -48,6 +48,9 @@
         'views/res_company_view.xml',
         'views/sale_order_view.xml',
         'wizards/account_invoice_create_views.xml',
+    ],
+    'qweb': [
+        'static/src/xml/chatter.xml',
     ],
     'external_dependencies': {
         'python': [
