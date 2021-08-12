@@ -11,7 +11,7 @@ class StockQuant(models.Model):
     def _prepare_account_move_line(
             self, cr, uid, move, qty, cost, credit_account_id,
             debit_account_id, context=None):
-        res = super(StockQuant, self)._prepare_account_move_line(
+        res = super()._prepare_account_move_line(
             cr, uid, move, qty, cost, credit_account_id, debit_account_id,
             context=context)
 

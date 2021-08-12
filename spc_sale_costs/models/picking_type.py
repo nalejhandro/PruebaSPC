@@ -12,14 +12,14 @@ class PickingType(models.Model):
 
     @api.model
     def create(self, vals):
-        res = super(PickingType, self).create(vals)
+        res = super().create(vals)
         if 'cost_on_sale_order' in vals:
             self.env['stock.picking'].search(
                 [('picking_type_id', '=', res.id)]).get_cost_sale_order()
         return res
 
     def write(self, vals):
-        res = super(PickingType, self).write(vals)
+        res = super().write(vals)
         for picking_type in self:
             if 'cost_on_sale_order' in vals:
                 self.env['stock.picking'].search(

@@ -55,7 +55,7 @@ class AccountInvoiceCreate(models.TransientModel):
 
     @api.model
     def default_get(self, field_list):
-        res = super(AccountInvoiceCreate, self).default_get(field_list)
+        res = super().default_get(field_list)
         active_ids = self._context.get('active_ids')
         assert active_ids, "Programming error: wizard action executed without active_ids"
         res.update({

@@ -13,7 +13,7 @@ class CrmLead(models.Model):
 
     def message_get_suggested_recipients(self):
         """The following method is brought from the module spc_sale_followers"""
-        recipients = super(CrmLead, self).message_get_suggested_recipients()
+        recipients = super().message_get_suggested_recipients()
         for lead_id, data in recipients.items():
             if data:
                 recipients[lead_id] = []
@@ -22,7 +22,7 @@ class CrmLead(models.Model):
     def write(self, vals):
         if 'stage_id' in vals:
             vals['date_stage_change'] = datetime.now()
-        return super(CrmLead, self).write(vals)
+        return super().write(vals)
 
     def _get_selection_values(self):
         return self.env.companies.mapped(lambda x: (x.id, x.name))

@@ -43,7 +43,7 @@ class StockPicking(models.Model):
                 vals['cost_sale_order_id'] = sale_order.id
             else:
                 vals['cost_sale_order_id'] = False
-        return super(StockPicking, self).create(vals)
+        return super().create(vals)
 
     def write(self, vals):
         for picking in self:

@@ -16,4 +16,4 @@ class SaleSubscription(models.Model):
                 _logger.info("Removed partner %s from sale.subscription %s in subscribe followers.",
                              partner, self.id)
                 partner_ids.remove(partner)
-        return super(SaleSubscription, self).message_subscribe(partner_ids, channel_ids, subtype_ids, force)
+        return super().message_subscribe(partner_ids, channel_ids, subtype_ids, force)

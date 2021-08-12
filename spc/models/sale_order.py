@@ -12,7 +12,7 @@ class SaleOrder(models.Model):
     @api.model
     @api.returns('self', lambda value: value.id)
     def create(self, vals):
-        res = super(SaleOrder, self).create(vals)
+        res = super().create(vals)
         # Forces the external ID creation as well
         res._BaseModel__ensure_xml_id()
         if res.opportunity_id:
@@ -25,4 +25,4 @@ class SaleOrder(models.Model):
             if partner == self.partner_id.id:
                 _logger.info("Removed partner %s from sale.order %s in subscribe followers.", partner, self.id)
                 partner_ids.remove(partner)
-        return super(SaleOrder, self).message_subscribe(partner_ids, channel_ids, subtype_ids)
+        return super().message_subscribe(partner_ids, channel_ids, subtype_ids)

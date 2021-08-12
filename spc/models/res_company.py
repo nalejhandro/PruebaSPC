@@ -25,7 +25,7 @@ class ResCompany(models.Model):
     prefix = fields.Char(size=10, default='')
 
     def name_get(self):
-        res = dict(super(ResCompany, self).name_get())
+        res = dict(super().name_get())
         for company in self.browse(res.keys()):
             company_name = "%s " % company.prefix if company.prefix else ''
             company_name += company.name
@@ -58,7 +58,7 @@ class ResConfigSettings(models.TransientModel):
 
     @api.model
     def get_values(self):
-        res = super(ResConfigSettings, self).get_values()
+        res = super().get_values()
         company = self.company_id
         res.update(
             bc_template=company.bc_template,
@@ -67,7 +67,7 @@ class ResConfigSettings(models.TransientModel):
         return res
 
     def set_values(self):
-        super(ResConfigSettings, self).set_values()
+        super().set_values()
         icpsudo = self.env['ir.config_parameter'].sudo()
         if self.bc_authorization_code:
             flow = OAuth2WebServerFlow(

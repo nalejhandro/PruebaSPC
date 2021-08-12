@@ -13,4 +13,4 @@ class HelpdeskTicket(models.Model):
     def write(self, vals):
         if 'stage_id' in vals:
             vals['date_stage_change'] = datetime.now()
-        return super(HelpdeskTicket, self).write(vals)
+        return super().write(vals)

@@ -12,7 +12,7 @@ class Account(models.Model):
     cost_on_sale_order = fields.Boolean('Cost on Sale Orders')
 
     def write(self, vals):
-        res = super(Account, self).write(vals)
+        res = super().write(vals)
         for account in self:
             self.env['account.move.line'].search(
                 [('account_id', '=', account.id)]).get_cost_sale_order()
