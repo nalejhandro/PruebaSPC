@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="email_domain_restricted_messages" model="ir.config_parameter">
+        <field name="key">email_domain.restricted_messages</field>
+        <field name="value">spcinternacional.com</field>
+    </record>
+</odoo>

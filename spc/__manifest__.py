@@ -1,6 +1,6 @@
 {
     'name': 'SPC Internacional App',
-    'version': '13.0.1.0.4',
+    'version': '13.0.1.0.5',
     "author": "Vauxoo",
     "license": "LGPL-3",
     'category': 'Installer',
@@ -36,6 +36,7 @@
         'data/product_data.xml',
         'data/project_data.xml',
         'data/helpdesk_data.xml',
+        'data/ir_config_parameter.xml',
         'security/spc_security.xml',
         'views/stock_move_views.xml',
         'views/account_move_views.xml',
