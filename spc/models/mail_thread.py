@@ -8,7 +8,7 @@ class MailThread(models.AbstractModel):
         res = super()._notify_compute_recipients(message, msg_vals)
         is_model = msg_vals.get('model') in ['sale.order', 'account.move', 'crm.lead']
         if res.get('partners') and is_model:
-            mail_domain = self.env.ref('spc.email_domain_restricted_messages')
+            mail_domain = self.env['ir.config_parameter'].sudo().get_param('email_domain.restricted_messages')
             partners = [partner['id'] for partner in res['partners']]
             internal = self.env.ref('base.group_user')
             users = self.env['res.users'].search_read(
@@ -16,7 +16,7 @@ class MailThread(models.AbstractModel):
                 ['partner_id', 'login'],
             )
             partner_ids = [user['partner_id'][0] for user in users if
-                           user['login'].split('@')[1] in mail_domain.value.split(',')]
+                           user['login'].split('@')[1] in mail_domain.split(',')]
             recipients = []
             for index, partner in enumerate(res['partners']):
                 if partner['id'] in partner_ids:
