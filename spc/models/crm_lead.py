@@ -68,6 +68,8 @@ class CrmLead(models.Model):
     detail_total_profit = fields.Float('Total Profit', digits='Account')
     detail_total_markup = fields.Float('Total Markup', digits='Account')
 
+    date_commitment = fields.Date("Customer commitment date")
+
     main_unit = fields.Selection([
         ('cibersecurity', 'CyberSecurity'), ('datacenter', 'DataCenter'),
         ('it_services', 'IT Services'), ('networking', 'Networking')],

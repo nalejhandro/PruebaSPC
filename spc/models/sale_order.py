@@ -1,5 +1,5 @@
 import logging
-from odoo import models, api
+from odoo import fields, models, api
 
 
 _logger = logging.getLogger(__name__)
@@ -8,6 +8,8 @@ _logger = logging.getLogger(__name__)
 class SaleOrder(models.Model):
 
     _inherit = 'sale.order'
+
+    date_commitment = fields.Date(related='opportunity_id.date_commitment', readonly=True, store=True)
 
     @api.model
     @api.returns('self', lambda value: value.id)
